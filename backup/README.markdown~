@@ -10,6 +10,6 @@
 
 To install plugins, open vim and type `:BundleInstall`.
 
-## Done
+# Done
 
 Hooray! It's code time...
