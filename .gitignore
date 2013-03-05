@@ -1,0 +1,6 @@
+backup/*
+bundle/*
+tmp/*
+
+!backup/.gitkeep
+!tmp/.gitkeep
