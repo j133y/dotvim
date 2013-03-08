@@ -104,6 +104,8 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/IndexedSearch'
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'vim-scripts/bufexplorer.zip'
 
 " enable file type detection
 filetype plugin on
@@ -139,20 +141,6 @@ let g:yankring_history_dir = "~/.vim/tmp"
 
 " clears the search register
 nmap <silent> <leader>/ :nohlsearch<CR>
-
-" navigate through buffers
-nmap <silent> <leader>be :CommandTBuffer<CR>
-
-" run CommandTFlush before opening CommandT
-map <leader>t :CommandTFlush<cr>\|:CommandT<cr>
-
-"Command-T mappings for rails
-map <leader>gv :CommandTFlush<cr>\|:CommandT app/views<cr>
-map <leader>gc :CommandTFlush<cr>\|:CommandT app/controllers<cr>
-map <leader>gm :CommandTFlush<cr>\|:CommandT app/models<cr>
-map <leader>gh :CommandTFlush<cr>\|:CommandT app/helpers<cr>
-map <leader>gl :CommandTFlush<cr>\|:CommandT lib<cr>
-map <leader>gp :CommandTFlush<cr>\|:CommandT public<cr>
 
 " show tag list
 nnoremap <leader>T :Tlist<CR>
