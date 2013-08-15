@@ -106,6 +106,7 @@ Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'rking/ag.vim'
 
 " enable file type detection
 filetype plugin on
