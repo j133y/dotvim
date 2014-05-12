@@ -1,6 +1,9 @@
 " do not use vi compatibility mode. must come first because it changes other options.
 set nocompatible
 
+" default encoding utf-8
+set encoding=utf-8
+
 " show incomplete commands
 set showcmd
 
@@ -8,7 +11,7 @@ set showcmd
 set list
 
 " use the same symbols as TextMate for tabstops and EOLs
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
 " show line numbers
 set number
@@ -98,7 +101,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Syntastic'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/AutoComplPop'
 Bundle 'vim-scripts/YankRing.vim'
@@ -144,7 +147,7 @@ let g:yankring_history_dir = "~/.vim/tmp"
 nmap <silent> <leader>/ :nohlsearch<CR>
 
 " show tag list
-nnoremap <leader>T :Tlist<CR>
+"nnoremap <leader>T :Tlist<CR>
 
 " open rails routes file
 map <leader>gr :topleft :split config/routes.rb<cr>
@@ -257,3 +260,9 @@ map <leader>r :call RunTestFile()<cr>
 map <leader>R :call RunNearestTest()<cr>
 " Run all test files
 map <leader>a :call RunTests('spec')<cr>
+"
+" For Ruby with PRY
+map <leader>pry orequire 'pry'; binding.pry<ESC>:w<CR>
+imap <leader>pry <CR>require 'pry'; binding.pry<ESC>:w<CR>
+
+map <leader>nt :NERDTreeToggle<CR>
