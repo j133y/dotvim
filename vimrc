@@ -105,7 +105,6 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'vim-scripts/IndexedSearch'
-Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'rking/ag.vim'
 
