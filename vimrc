@@ -81,40 +81,31 @@ set hidden
 
 " vundle setup
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " vim bundles
-Bundle 'tomasr/molokai'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'mileszs/ack.vim'
-Bundle 'ecomba/vim-ruby-refactoring'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Syntastic'
-"Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'vim-scripts/AutoComplPop'
-Bundle 'vim-scripts/YankRing.vim'
-Bundle 'vim-scripts/kwbdi.vim'
-Bundle 'vim-scripts/AutoTag'
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'vim-scripts/bufexplorer.zip'
-Bundle 'rking/ag.vim'
+Plugin 'tomasr/molokai'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/AutoComplPop'
+Plugin 'vim-scripts/YankRing.vim'
+Plugin 'vim-scripts/kwbdi.vim'
+Plugin 'vim-scripts/AutoTag'
+Plugin 'vim-scripts/IndexedSearch'
+Plugin 'vim-scripts/bufexplorer.zip'
+Plugin 'rking/ag.vim'
 
-" enable file type detection
-filetype plugin on
-" enable filetype-based indentation
-filetype indent on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 " set color scheme
 colorscheme molokai
