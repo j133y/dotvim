@@ -121,5 +121,4 @@ map <leader>bw :call Wipeout()<CR>
 " For Ruby with PRY
 map <leader>pry orequire 'pry'; binding.pry<ESC>:w<CR>
 imap <leader>pry <CR>require 'pry'; binding.pry<ESC>:w<CR>
-
 map <leader>nt :NERDTreeToggle<CR>
