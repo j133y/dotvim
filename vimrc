@@ -1,4 +1,7 @@
+autocmd!
+
 set nocompatible " do not use vi compatibility mode. must come first because it changes other options.
+set noshowmode
 set encoding=utf-8 " default encoding utf-8
 set showcmd " show incomplete commands
 set list " show invisibles
@@ -54,6 +57,8 @@ Plugin 'vim-scripts/YankRing.vim'
 Plugin 'vim-scripts/kwbdi.vim'
 Plugin 'vim-scripts/bufexplorer.zip'
 Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -122,3 +127,22 @@ map <leader>bw :call Wipeout()<CR>
 map <leader>pry orequire 'pry'; binding.pry<ESC>:w<CR>
 imap <leader>pry <CR>require 'pry'; binding.pry<ESC>:w<CR>
 map <leader>nt :NERDTreeToggle<CR>
+
+" CtrlP
+let g:ctrlp_map = '<Leader>p'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_working_path_mode = 'ra'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git\|node_modules\|bin\|\.hg\|\.svn\|build\|log\|resources\|coverage\|doc\|tmp\|public/assets\|vendor\|Android',
+  \ 'file': '\.jpg$\|\.exe$\|\.so$\|tags$\|\.dll$'
+  \ }
+
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+let g:ctrlp_funky_syntax_highlight = 1
+let g:ctrlp_clear_cache_on_exit = 0
+
+" Make those debugger statements painfully obvious
+au BufEnter *.rb syn match error contained "\<binding.pry\>"
