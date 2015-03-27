@@ -59,6 +59,7 @@ Plugin 'vim-scripts/bufexplorer.zip'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'Shougo/neocomplete.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -146,3 +147,5 @@ let g:ctrlp_clear_cache_on_exit = 0
 
 " Make those debugger statements painfully obvious
 au BufEnter *.rb syn match error contained "\<binding.pry\>"
+
+let g:neocomplete#enable_at_startup = 1
