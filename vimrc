@@ -7,6 +7,7 @@ set showcmd " show incomplete commands
 set list " show invisibles
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮ " use the same symbols as TextMate for tabstops and EOLs
 set number " show line numbers
+set ruler " show column number
 set linebreak " don't break wrapped lines on words
 set cc=120 " highlight 80 columns
 set backspace=indent,eol,start " intuitive backspacing
