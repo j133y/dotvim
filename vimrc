@@ -21,7 +21,7 @@ set shiftwidth=2 " number of spaces used for (auto)indent
 set expandtab " use soft tabs (spaces)
 set softtabstop=2 " size of soft tabs
 set autoindent " auto indent lines
-set smartindent " smart (language based) auto indent 
+set smartindent " smart (language based) auto indent
 set history=500 " keep 500 cmdline history
 set undofile " persistent undo
 set undodir=~/.vim/tmp
@@ -61,6 +61,9 @@ Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'othree/html5.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -149,4 +152,17 @@ let g:ctrlp_clear_cache_on_exit = 0
 " Make those debugger statements painfully obvious
 au BufEnter *.rb syn match error contained "\<binding.pry\>"
 
+"  neocomplete
+
 let g:neocomplete#enable_at_startup = 1
+
+" syntastic
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
